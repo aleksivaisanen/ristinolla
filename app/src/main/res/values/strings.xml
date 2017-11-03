@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ristinolla</string>
+    <string name="peli_vuoro_1">Pelaajan 1 vuoro</string>
+    <string name="peli_vuoro_2">Pelaajan 2 vuoro</string>
+    <string name="sina_vuoro">Sinun vuorosi</string>
+    <string name="tietokone_vuoro">Tietokoneen vuoro</string>
+    <string name="alkuarvo"> </string>
+    <string name="varattu">Tämä ruutu on varattu, kokeile jotain toista</string>
+    <string name="risti">X</string>
+    <string name="nolla">O</string>
+    <string name="pelaaja_1_voitto">Pelaaja 1, voitit pelin!</string>
+    <string name="pelaaja_2_voitto">Pelaaja 2, voitit pelin!</string>
+    <string name="sina_voitto">Sinä voitit pelin!</string>
+    <string name="tietokone_voitto">Tietokone voitti pelin!</string>
+    <string name="credits">Aleksi Väisänen production</string>
+    <string name="tasapeli">Tasapeli!</string>
+    <string name="uusi_peli">Uusi peli?</string>
+    <string name="takaisin">Takaisin</string>
+    <string name="tietokone">Tietokone: </string>
+    <string name="sina">Sinä: </string>
+    <string name="pelaaja_1">Pelaaja 1: </string>
+    <string name="pelaaja_2">Pelaaja 2: </string>
+
+</resources>
