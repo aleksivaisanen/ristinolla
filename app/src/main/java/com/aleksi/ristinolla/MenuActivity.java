@@ -15,18 +15,14 @@ public class MenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_menu_activity);
-        Log.d("aksu","hep");
-
     }
     public void startGame(View v){
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
     public void startCpuGame(View v){
-        Log.d("aksu","hep");
         Intent intent = new Intent(this, CpuActivity.class);
         startActivity(intent);
-
     }
 
 }

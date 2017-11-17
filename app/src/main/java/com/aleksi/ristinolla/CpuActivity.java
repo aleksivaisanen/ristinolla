@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.LightingColorFilter;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -233,7 +231,7 @@ public class CpuActivity extends Activity {
                                     ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(k)).setEnabled(false);
                                     siirtotehty = true;
 
-                                    Log.d("aksu","for11");
+
                                     break;
                                 }
                             }
@@ -245,7 +243,7 @@ public class CpuActivity extends Activity {
                                     ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(k)).setEnabled(false);
                                     siirtotehty = true;
 
-                                    Log.d("aksu","for12");
+
                                     break;
                                 }
                             }
@@ -275,7 +273,6 @@ public class CpuActivity extends Activity {
                                     ((Button) ((TableRow) layout.getChildAt(k)).getChildAt(i)).setEnabled(false);
                                     siirtotehty = true;
 
-                                    Log.d("aksu","for21");
                                     break;
                                 }
                             }
@@ -287,7 +284,6 @@ public class CpuActivity extends Activity {
                                     ((Button) ((TableRow) layout.getChildAt(k)).getChildAt(i)).setEnabled(false);
                                     siirtotehty = true;
 
-                                    Log.d("aksu","for22");
                                     break;
                                 }
                             }
@@ -308,7 +304,6 @@ public class CpuActivity extends Activity {
 
                         if (j == i && ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(j)).getText().equals(getResources().getString(R.string.risti))) {
                             lukuvastus++;
-                            Log.d("aksu",Integer.toString(lukuvastus));
                         }
                         if (j == i && ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(j)).getText().equals(getResources().getString(R.string.nolla))) {
                             lukuoma++;
@@ -322,7 +317,6 @@ public class CpuActivity extends Activity {
                                     siirtotehty = true;
                                     lukuoma = 0;
                                     lukuvastus = 0;
-                                    Log.d("aksu","for31");
                                     break;
                                 }
                             break;
@@ -330,17 +324,14 @@ public class CpuActivity extends Activity {
                         }
                         }
                         else if (lukuvastus >= 2 && !siirtotehty &&kerta==1) {
-                            Log.d("aksu","else if päästiin sisälle");
                             for(int l=0; l<3;l++) {
                                 for (int k = 0; k < 3; k++) {
-                                    Log.d("aksu", "i=" + Integer.toString(l) + " " + "k=" + Integer.toString(k) + "siirtotehty=" + Boolean.toString(siirtotehty));
                                     if (((Button) ((TableRow) layout.getChildAt(l)).getChildAt(k)).getText().equals(getResources().getString(R.string.alkuarvo)) && !siirtotehty && l == k) {
                                         ((Button) ((TableRow) layout.getChildAt(l)).getChildAt(k)).setText(getResources().getString(R.string.nolla));
                                         ((Button) ((TableRow) layout.getChildAt(l)).getChildAt(k)).setEnabled(false);
                                         siirtotehty = true;
                                         lukuoma = 0;
                                         lukuvastus = 0;
-                                        Log.d("aksu", "for32");
                                         break;
                                     }
                                 }
@@ -359,7 +350,6 @@ public class CpuActivity extends Activity {
 
                         if (i + j == 2 && ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(j)).getText().equals(getResources().getString(R.string.risti))) {
                             lukuvastus++;
-                            Log.d("aksu",Integer.toString(lukuvastus)+" vasuri");
                         }
                         if (i + j == 2 && ((Button) ((TableRow) layout.getChildAt(i)).getChildAt(j)).getText().equals(getResources().getString(R.string.nolla))) {
                             lukuoma++;
@@ -373,7 +363,6 @@ public class CpuActivity extends Activity {
                                         siirtotehty = true;
                                         lukuoma = 0;
                                         lukuvastus = 0;
-                                        Log.d("aksu", "for41");
                                         break;
                                     } else {
                                         break;
@@ -382,17 +371,14 @@ public class CpuActivity extends Activity {
                                 break;
                             }
                         }else if (lukuvastus >= 2 && !siirtotehty &&kerta==1) {
-                            Log.d("aksu","else if päästiin sisälle, vasuri");
                             for (int l = 0; l < 3; l++) {
                                 for (int k = 0; k < 3; k++) {
-                                    Log.d("aksu", "l=" + Integer.toString(l) + " " + "k=" + Integer.toString(k) + "siirtotehty=" + Boolean.toString(siirtotehty)+" vasuri");
                                     if (((Button) ((TableRow) layout.getChildAt(k)).getChildAt(l)).getText().equals(getResources().getString(R.string.alkuarvo)) && !siirtotehty && l + k == 2) {
                                         ((Button) ((TableRow) layout.getChildAt(k)).getChildAt(l)).setText(getResources().getString(R.string.nolla));
                                         ((Button) ((TableRow) layout.getChildAt(k)).getChildAt(l)).setEnabled(false);
                                         siirtotehty = true;
                                         lukuoma = 0;
                                         lukuvastus = 0;
-                                        Log.d("aksu", "for42");
                                         break;
                                     }
                                 }
@@ -403,7 +389,6 @@ public class CpuActivity extends Activity {
                 }
 
                 if (!siirtotehty&&kerta ==1) {
-                    Log.d("aksu","whileen päästiin");
                     Random rnd = new Random();
                     while (true) {
                         int x = rnd.nextInt(3);
